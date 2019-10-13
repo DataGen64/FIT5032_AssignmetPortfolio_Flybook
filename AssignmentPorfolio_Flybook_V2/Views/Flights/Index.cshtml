@@ -1,0 +1,128 @@
+﻿@model IEnumerable<AssignmentPorfolio_Flybook_V2.Models.Flight>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AvailableSeats)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartureDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartureTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArrivalDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArrivalTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Departure_Loc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Arrival_Loc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.From_Latitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.From_Longitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.To_Latitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.To_Longitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FairPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FlightNo)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvailableSeats)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartureDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartureTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Departure_Loc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arrival_Loc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.From_Latitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.From_Longitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.To_Latitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.To_Longitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FairPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlightNo)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.FlightId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.FlightId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.FlightId })
+            </td>
+        </tr>
+    }
+    </tbody>
+
+</table>
+
+
+    )
+
+@section Scripts
+{
+    @Scripts.Render("~/Scripts/DataTables/jquery.dataTables.js")
+    @Scripts.Render("~/Scripts/DataTables/dataTables.bootstrap.js")
+
+    <script>
+        $(document).ready(function () {
+            $('.table').DataTable();
+        });
+    </script>
+}
+<link href="~/Content/DataTables/css/dataTables.bootstrap.min.css"
+      rel="stylesheet" />

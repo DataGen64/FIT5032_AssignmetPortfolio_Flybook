@@ -1,0 +1,51 @@
+﻿@model AssignmentPorfolio_Flybook_V2.Models.Rating
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Rating</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Booking.User_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Booking.User_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RatingDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RatingDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RatingProvided)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RatingProvided)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Booking_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

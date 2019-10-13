@@ -1,0 +1,123 @@
+﻿@model AssignmentPorfolio_Flybook_V2.Models.Flight
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Flight</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AvailableSeats)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvailableSeats)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartureDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartureDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartureTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartureTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArrivalDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArrivalDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArrivalTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArrivalTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Departure_Loc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departure_Loc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Arrival_Loc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Arrival_Loc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.From_Latitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.From_Latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.From_Longitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.From_Longitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.To_Latitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.To_Latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.To_Longitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.To_Longitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FairPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FairPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlightNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlightNo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FlightId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
